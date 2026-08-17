@@ -62,7 +62,7 @@ export const Education: React.FC<EducationProps> = ({ lang }) => {
                 </span>
               </div>
 
-              <p className="text-xs sm:text-sm text-secondaryText/90 leading-relaxed mb-5 font-normal">
+              <p className="text-xs sm:text-sm text-secondaryText/90 leading-relaxed mb-5 font-normal text-justify">
                 {currentEdu[0].description}
               </p>
             </div>
@@ -111,7 +111,7 @@ export const Education: React.FC<EducationProps> = ({ lang }) => {
                 {currentAwards[0].title}
               </h3>
 
-              <p className="text-xs sm:text-sm text-secondaryText/90 leading-relaxed mb-5 font-normal">
+              <p className="text-xs sm:text-sm text-secondaryText/90 leading-relaxed mb-5 font-normal text-justify">
                 {currentAwards[0].description}
               </p>
             </div>

@@ -70,7 +70,7 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({ lang }) => {
                 {/* Right Content Column */}
                 <div className="lg:col-span-7 flex flex-col justify-between">
                   <div>
-                    <p className="text-xs sm:text-sm text-primaryText/90 leading-relaxed font-normal mb-4">
+                    <p className="text-xs sm:text-sm text-primaryText/90 leading-relaxed font-normal mb-4 text-justify">
                       {work.description}
                     </p>
 

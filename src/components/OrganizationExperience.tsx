@@ -65,7 +65,7 @@ export const OrganizationExperience: React.FC<OrganizationExperienceProps> = ({ 
                 </div>
 
                 {/* Description */}
-                <p className="text-sm text-secondaryText leading-relaxed mb-6 font-normal">
+                <p className="text-sm text-secondaryText leading-relaxed mb-6 font-normal text-justify">
                   {org.description}
                 </p>
               </div>

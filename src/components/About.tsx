@@ -44,7 +44,7 @@ export const About: React.FC<AboutProps> = ({ lang }) => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-7 flex flex-col gap-8"
           >
-            <p className="text-lg text-primaryText/90 leading-relaxed font-normal">
+            <p className="text-sm sm:text-lg text-primaryText/90 leading-relaxed font-normal text-justify">
               {currentInfo.aboutParagraph}
             </p>
 
