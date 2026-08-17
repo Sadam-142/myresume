@@ -141,16 +141,16 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
 
         {/* Right Action Bar */}
-        <div className="flex items-center gap-2 sm:gap-3.5">
+        <div className="flex items-center gap-1.5 sm:gap-3">
           {/* Language Switcher Button (EN | ID) */}
           <button
             onClick={onToggleLanguage}
             onMouseEnter={onMouseEnterButton}
             onMouseLeave={onMouseLeaveButton}
             aria-label="Switch Language"
-            className="group relative inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-normal text-white bg-surfaceDark/90 border border-white/20 hover:border-accentCyan/60 transition-all duration-300 shadow-md cursor-pointer"
+            className="group relative inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold tracking-normal text-white bg-surfaceDark/90 border border-white/20 hover:border-accentCyan/60 transition-all duration-300 shadow-md cursor-pointer"
           >
-            <Globe className="w-3.5 h-3.5 text-accentCyan group-hover:rotate-45 transition-transform duration-300" />
+            <Globe className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-accentCyan group-hover:rotate-45 transition-transform duration-300" />
             <div className="flex items-center gap-1 font-mono">
               <span className={lang === 'EN' ? 'text-accentElectric font-black' : 'text-secondaryText font-medium'}>
                 EN
@@ -169,7 +169,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             onMouseLeave={onMouseLeaveButton}
             aria-label="Toggle Theme"
             title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            className="group relative inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold tracking-normal text-white bg-surfaceDark/90 border border-white/20 hover:border-accentCyan/60 transition-all duration-300 shadow-md cursor-pointer"
+            className="group relative inline-flex items-center justify-center p-1.5 sm:px-3 sm:py-1.5 rounded-full text-xs font-semibold tracking-normal text-white bg-surfaceDark/90 border border-white/20 hover:border-accentCyan/60 transition-all duration-300 shadow-md cursor-pointer"
           >
             {theme === 'dark' ? (
               <>
@@ -190,9 +190,9 @@ export const Navbar: React.FC<NavbarProps> = ({
             aria-label="Toggle mobile menu"
             onMouseEnter={onMouseEnterButton}
             onMouseLeave={onMouseLeaveButton}
-            className="xl:hidden p-2.5 rounded-xl text-secondaryText hover:text-white bg-surfaceDark/90 border border-white/20 focus:outline-none cursor-pointer"
+            className="xl:hidden p-1.5 sm:p-2.5 rounded-xl text-secondaryText hover:text-white bg-surfaceDark/90 border border-white/20 focus:outline-none cursor-pointer"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
           </button>
         </div>
       </div>

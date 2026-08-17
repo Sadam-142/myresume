@@ -19,7 +19,7 @@ export const Hero: React.FC<HeroProps> = ({
   const currentInfo = personalInfo[lang];
 
   return (
-    <section id="hero" className="relative min-h-screen pt-28 sm:pt-36 pb-16 sm:pb-24 flex items-center overflow-hidden">
+    <section id="hero" className="relative min-h-[auto] md:min-h-screen pt-24 sm:pt-36 pb-12 sm:pb-24 flex items-center overflow-hidden">
       {/* Floating Modern Code Snippets Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0">
         {/* Code Chip 1: Top Left */}
@@ -50,7 +50,7 @@ export const Hero: React.FC<HeroProps> = ({
         </div>
 
         {/* Code Chip 5: Floating Mobile/Tablet Chip */}
-        <div className="absolute top-[8%] left-[45%] flex items-center gap-1.5 px-2.5 py-1 rounded-lg glass-card border-accentCyan/30 text-[10px] font-mono shadow-sm bg-surfaceDark/70 opacity-60">
+        <div className="absolute top-[8%] left-[45%] hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-lg glass-card border-accentCyan/30 text-[10px] font-mono shadow-sm bg-surfaceDark/70 opacity-60">
           <span className="text-accentElectric font-semibold">npm run dev</span>
         </div>
 
@@ -65,13 +65,14 @@ export const Hero: React.FC<HeroProps> = ({
         {/* Ambient Glowing Cyber Grid Aura behind Hero */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-r from-accentCyan/15 via-accentBlue/20 to-accentViolet/15 rounded-full blur-[90px] pointer-events-none z-0" />
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full grid grid-cols-12 gap-3 sm:gap-8 lg:gap-12 items-center">
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full flex flex-col md:grid md:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
         {/* LEFT COLUMN - ULTRA-MODERN PHOTO FRAME */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="col-span-5 sm:col-span-5 lg:col-span-5 flex justify-center items-center relative transform-gpu"
+          className="w-full md:col-span-5 flex justify-center items-center relative transform-gpu"
         >
           {/* REAR GLOWING LIGHT FLARE AURA (Kilauan Cahaya dari Belakang) */}
           <div className="absolute -inset-3 sm:-inset-6 rounded-3xl bg-gradient-to-r from-accentCyan via-accentBlue to-accentViolet opacity-70 blur-lg sm:blur-xl animate-pulse-slow pointer-events-none z-0 transform-gpu" />
@@ -95,7 +96,7 @@ export const Hero: React.FC<HeroProps> = ({
           <motion.div
             whileHover={{ scale: 1.04, rotate: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative z-10 w-full max-w-[155px] sm:max-w-md aspect-[4/5] rounded-2xl sm:rounded-3xl p-[2px] sm:p-[3px] bg-gradient-to-b from-accentCyan via-white/40 to-accentViolet shadow-[0_0_50px_rgba(0,240,255,0.45)] backdrop-blur-2xl border border-white/40 cursor-pointer"
+            className="relative z-10 w-full max-w-[210px] sm:max-w-xs md:max-w-md aspect-[4/5] rounded-2xl sm:rounded-3xl p-[2px] sm:p-[3px] bg-gradient-to-b from-accentCyan via-white/40 to-accentViolet shadow-[0_0_40px_rgba(0,240,255,0.4)] backdrop-blur-2xl border border-white/40 cursor-pointer"
           >
             <div className="relative w-full h-full rounded-[13px] sm:rounded-[21px] bg-surfaceDark overflow-hidden flex flex-col justify-end group shadow-2xl">
               {/* Profile Photo */}
@@ -116,59 +117,59 @@ export const Hero: React.FC<HeroProps> = ({
               <div className="absolute inset-0 bg-gradient-to-t from-bgDark/95 via-bgDark/20 to-transparent pointer-events-none" />
 
               {/* Floating Bottom Info Tag */}
-              <div className="absolute bottom-1.5 left-1.5 right-1.5 sm:bottom-4 sm:left-4 sm:right-4 z-10">
-                <div className="glass-card p-1.5 sm:p-2.5 rounded-lg sm:rounded-xl border-white/20 backdrop-blur-md flex items-center justify-between shadow-xl bg-surfaceDark/90">
-                  <div className="flex items-center gap-1.5 sm:gap-2.5 min-w-0">
+              <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 z-10">
+                <div className="glass-card p-2 sm:p-2.5 rounded-lg sm:rounded-xl border-white/20 backdrop-blur-md flex items-center justify-between shadow-xl bg-surfaceDark/90">
+                  <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
                     <div className="p-1 sm:p-1.5 rounded-md sm:rounded-lg bg-accentCyan/20 text-accentElectric border border-accentCyan/40 shadow-sm shrink-0">
-                      <Code2 className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" />
+                      <Code2 className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                     </div>
                     <div className="truncate min-w-0">
-                      <h4 className="text-[9px] sm:text-xs font-semibold text-white leading-tight truncate">
+                      <h4 className="text-[10px] sm:text-xs font-semibold text-white leading-tight truncate">
                         {currentInfo.name}
                       </h4>
-                      <p className="text-[8px] sm:text-[10px] text-accentCyan font-medium leading-tight truncate hidden sm:block">
+                      <p className="text-[9px] sm:text-[10px] text-accentCyan font-medium leading-tight truncate">
                         {currentInfo.title}
                       </p>
                     </div>
                   </div>
-                  <Sparkles className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 text-accentCyan animate-pulse shrink-0 ml-1" />
+                  <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-accentCyan animate-pulse shrink-0 ml-1" />
                 </div>
               </div>
             </div>
           </motion.div>
         </motion.div>
 
-        {/* RIGHT COLUMN - TYPOGRAPHY & SKILLS (Side-by-side on mobile & desktop) */}
+        {/* RIGHT COLUMN - TYPOGRAPHY & SKILLS */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-          className="col-span-7 sm:col-span-7 lg:col-span-7 flex flex-col items-start z-10"
+          className="w-full md:col-span-7 flex flex-col items-center md:items-start text-center md:text-left z-10"
         >
           {/* Unique Curved Handwriting Greeting */}
-          <span className="font-handwriting text-accentCyan text-2xl sm:text-4xl lg:text-5xl font-bold tracking-wide block mb-0.5 sm:mb-1">
+          <span className="font-handwriting text-accentCyan text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wide block mb-1">
             {currentInfo.greeting}
           </span>
 
           {/* Full Name in Ultra-Modern Font */}
-          <h1 className="text-lg sm:text-4xl lg:text-6xl font-black font-brand-logo tracking-tight leading-[1.12] mb-2 sm:mb-6">
+          <h1 className="text-2xl sm:text-4xl lg:text-6xl font-black font-brand-logo tracking-tight leading-[1.15] mb-3 sm:mb-6">
             <span className="text-gradient">
               {currentInfo.heroName}
             </span>
           </h1>
 
           {/* Primary Skills & Role Description */}
-          <p className="text-xs sm:text-lg lg:text-xl font-bold text-white leading-snug sm:leading-relaxed mb-4 sm:mb-8 max-w-2xl">
+          <p className="text-sm sm:text-lg lg:text-xl font-medium sm:font-bold text-white leading-relaxed mb-6 sm:mb-8 max-w-2xl text-center md:text-left">
             {currentInfo.heroDescription}
           </p>
 
-          {/* Clean Action Buttons (Compact layout, soft natural font, side-by-side) */}
-          <div className="grid grid-cols-2 sm:flex sm:items-center gap-2 sm:gap-3 w-full sm:w-auto mb-3 sm:mb-4">
+          {/* Clean Action Buttons */}
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 w-full sm:w-auto mb-5 sm:mb-6">
             <a
               href="#contact"
               onMouseEnter={onMouseEnterButton}
               onMouseLeave={onMouseLeaveButton}
-              className="group inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-5 sm:py-2.5 rounded-full font-semibold text-xs sm:text-sm text-bgDark bg-accentCyan hover:bg-accentElectric transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.35)] hover:shadow-[0_0_25px_rgba(0,240,255,0.5)] text-center whitespace-nowrap"
+              className="group inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm text-bgDark bg-accentCyan hover:bg-accentElectric transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.35)] hover:shadow-[0_0_25px_rgba(0,240,255,0.5)] text-center whitespace-nowrap"
             >
               <span>{lang === 'EN' ? 'Contact Me' : 'Hubungi Saya'}</span>
               <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
@@ -178,15 +179,15 @@ export const Hero: React.FC<HeroProps> = ({
               href="#projects"
               onMouseEnter={onMouseEnterButton}
               onMouseLeave={onMouseLeaveButton}
-              className="group inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-5 sm:py-2.5 rounded-full font-semibold text-xs sm:text-sm text-white bg-surfaceDark/90 border border-white/20 hover:border-accentCyan/60 hover:bg-surfaceDark transition-all duration-300 shadow-sm text-center whitespace-nowrap"
+              className="group inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm text-white bg-surfaceDark/90 border border-white/20 hover:border-accentCyan/60 hover:bg-surfaceDark transition-all duration-300 shadow-sm text-center whitespace-nowrap"
             >
               <span>{lang === 'EN' ? 'View Work' : 'Lihat Proyek'}</span>
               <FolderGit2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accentCyan group-hover:scale-110 group-hover:rotate-6 transition-transform shrink-0" />
             </a>
           </div>
 
-          {/* Social Links Row (Directly below buttons with seamless compact spacing & soft font) */}
-          <div className="flex items-center gap-2.5 sm:gap-4 w-full max-w-md pt-1">
+          {/* Social Links Row */}
+          <div className="flex items-center justify-center md:justify-start gap-3.5 w-full max-w-md pt-1">
             <span className="text-xs sm:text-sm font-medium text-secondaryText/90 tracking-normal">
               {lang === 'EN' ? 'Connect:' : 'Sosial Media:'}
             </span>
@@ -198,9 +199,9 @@ export const Hero: React.FC<HeroProps> = ({
                 aria-label="GitHub Profile"
                 onMouseEnter={onMouseEnterButton}
                 onMouseLeave={onMouseLeaveButton}
-                className="p-1.5 sm:p-2 rounded-xl glass-card text-white hover:text-accentCyan hover:border-accentCyan/50 transition-all duration-200 shadow-sm"
+                className="p-2 sm:p-2.5 rounded-xl glass-card text-white hover:text-accentCyan hover:border-accentCyan/50 transition-all duration-200 shadow-sm"
               >
-                <IconGithub className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                <IconGithub className="w-4 h-4" />
               </a>
               <a
                 href={socialLinks.linkedin}
@@ -209,9 +210,9 @@ export const Hero: React.FC<HeroProps> = ({
                 aria-label="LinkedIn Profile"
                 onMouseEnter={onMouseEnterButton}
                 onMouseLeave={onMouseLeaveButton}
-                className="p-1.5 sm:p-2 rounded-xl glass-card text-white hover:text-accentBlue hover:border-accentBlue/50 transition-all duration-200 shadow-sm"
+                className="p-2 sm:p-2.5 rounded-xl glass-card text-white hover:text-accentBlue hover:border-accentBlue/50 transition-all duration-200 shadow-sm"
               >
-                <IconLinkedin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                <IconLinkedin className="w-4 h-4" />
               </a>
               <a
                 href={socialLinks.instagram}
@@ -220,9 +221,9 @@ export const Hero: React.FC<HeroProps> = ({
                 aria-label="Instagram Profile"
                 onMouseEnter={onMouseEnterButton}
                 onMouseLeave={onMouseLeaveButton}
-                className="p-1.5 sm:p-2 rounded-xl glass-card text-white hover:text-accentViolet hover:border-accentViolet/50 transition-all duration-200 shadow-sm"
+                className="p-2 sm:p-2.5 rounded-xl glass-card text-white hover:text-accentViolet hover:border-accentViolet/50 transition-all duration-200 shadow-sm"
               >
-                <IconInstagram className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                <IconInstagram className="w-4 h-4" />
               </a>
             </div>
           </div>
