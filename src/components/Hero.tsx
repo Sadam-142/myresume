@@ -25,13 +25,13 @@ export const Hero: React.FC<HeroProps> = ({
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] sm:w-[850px] h-[400px] bg-gradient-to-r from-accentCyan/15 via-accentBlue/20 to-accentViolet/15 rounded-full blur-[100px] pointer-events-none" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full flex flex-col lg:grid lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center justify-items-center lg:justify-items-start">
         {/* LEFT / TOP COLUMN - PREMIUM PHOTO PORTRAIT FRAME */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="w-full lg:col-span-5 flex justify-center items-center relative transform-gpu"
+          className="w-full col-span-1 lg:col-span-5 flex justify-center items-center relative transform-gpu"
         >
           {/* Ambient Outer Aura Ring */}
           <div className="absolute -inset-3 sm:-inset-6 rounded-[35px] bg-gradient-to-r from-accentCyan via-accentBlue to-accentViolet opacity-60 blur-xl animate-pulse-slow pointer-events-none z-0 transform-gpu" />
@@ -66,7 +66,7 @@ export const Hero: React.FC<HeroProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-          className="w-full lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left z-10"
+          className="w-full col-span-1 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left z-10"
         >
           {/* Plain Handwriting Greeting */}
           <span className="font-handwriting text-accentCyan text-2xl sm:text-4xl lg:text-5xl font-bold tracking-wide block mb-1">
