@@ -37,13 +37,13 @@ export const Education: React.FC<EducationProps> = ({ lang }) => {
             <div className="absolute top-0 right-0 w-48 h-48 bg-accentCyan/10 rounded-full blur-3xl pointer-events-none" />
 
             <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-accentCyan/20 border border-accentCyan/40 text-accentElectric font-mono text-xs font-bold uppercase tracking-wider">
-                  <GraduationCap className="w-4 h-4" />
-                  <span>{lang === 'EN' ? 'Education' : 'Pendidikan Utama'}</span>
+              <div className="flex flex-wrap items-center justify-between gap-2.5 mb-4">
+                <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-accentCyan/20 border border-accentCyan/40 text-accentElectric font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider">
+                  <GraduationCap className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                  <span className="whitespace-nowrap">{lang === 'EN' ? 'Education' : 'Pendidikan Utama'}</span>
                 </div>
-                <span className="text-xs font-semibold font-mono text-secondaryText flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-accentCyan" />
+                <span className="text-[11px] sm:text-xs font-semibold font-mono text-secondaryText flex items-center gap-1.5 whitespace-nowrap">
+                  <Calendar className="w-3.5 h-3.5 text-accentCyan shrink-0" />
                   {currentEdu[0].period}
                 </span>
               </div>
@@ -93,12 +93,12 @@ export const Education: React.FC<EducationProps> = ({ lang }) => {
             <div className="absolute top-0 right-0 w-48 h-48 bg-accentBlue/10 rounded-full blur-3xl pointer-events-none" />
 
             <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-accentBlue/20 border border-accentBlue/40 text-accentBlue font-mono text-xs font-bold uppercase tracking-wider">
-                  <Award className="w-4 h-4" />
-                  <span>{lang === 'EN' ? 'Honors & Award' : 'Penghargaan'}</span>
+              <div className="flex flex-wrap items-center justify-between gap-2.5 mb-4">
+                <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-accentBlue/20 border border-accentBlue/40 text-accentBlue font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider">
+                  <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                  <span className="whitespace-nowrap">{lang === 'EN' ? 'Honors & Award' : 'Penghargaan'}</span>
                 </div>
-                <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold text-accentElectric bg-surfaceDark border border-accentCyan/40">
+                <span className="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-mono font-bold text-accentElectric bg-surfaceDark border border-accentCyan/40 whitespace-nowrap">
                   {currentAwards[0].year}
                 </span>
               </div>

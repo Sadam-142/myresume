@@ -44,12 +44,12 @@ export const OrganizationExperience: React.FC<OrganizationExperienceProps> = ({ 
             >
               <div>
                 {/* Header Row */}
-                <div className="flex items-center justify-between mb-4 gap-4">
-                  <span className="px-3.5 py-1.5 rounded-xl text-xs font-mono font-black text-accentElectric bg-accentCyan/15 border border-accentCyan/30 uppercase tracking-wider">
+                <div className="flex flex-wrap items-center justify-between gap-2.5 mb-4">
+                  <span className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-xl text-[11px] sm:text-xs font-mono font-black text-accentElectric bg-accentCyan/15 border border-accentCyan/30 uppercase tracking-wider whitespace-nowrap">
                     {org.category}
                   </span>
-                  <span className="text-xs font-bold font-mono text-secondaryText flex items-center gap-1.5 shrink-0">
-                    <Calendar className="w-3.5 h-3.5 text-accentCyan" />
+                  <span className="text-[11px] sm:text-xs font-bold font-mono text-secondaryText flex items-center gap-1.5 shrink-0 whitespace-nowrap">
+                    <Calendar className="w-3.5 h-3.5 text-accentCyan shrink-0" />
                     {org.period}
                   </span>
                 </div>
