@@ -31,7 +31,7 @@ export const Hero: React.FC<HeroProps> = ({
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="w-full col-span-1 lg:col-span-5 flex justify-center items-center relative transform-gpu"
+          className="w-full col-span-1 lg:col-span-5 flex justify-center items-center relative transform-gpu animate-float-continuous"
         >
           {/* Ambient Outer Aura Ring */}
           <div className="absolute -inset-3 sm:-inset-6 rounded-[35px] bg-gradient-to-r from-accentCyan via-accentBlue to-accentViolet opacity-60 blur-xl animate-pulse-slow pointer-events-none z-0 transform-gpu" />

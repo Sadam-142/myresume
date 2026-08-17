@@ -252,3 +252,22 @@ html.light .text-gradient-alt {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Continuous Floating Photo Frame Motion (Pauses on Hover / Touch) */
+@keyframes floatContinuous {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+.animate-float-continuous {
+  animation: floatContinuous 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-continuous:hover {
+  animation-play-state: paused;
+}
