@@ -20,114 +20,57 @@ export const Hero: React.FC<HeroProps> = ({
 
   return (
     <section id="hero" className="relative min-h-screen pt-28 sm:pt-36 pb-16 sm:pb-24 flex items-center overflow-hidden">
-      {/* Floating Animated Modern Code Snippets Background Elements */}
+      {/* Floating Modern Code Snippets Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0">
         {/* Code Chip 1: Top Left */}
-        <motion.div
-          animate={{
-            y: [0, -18, 0],
-            x: [0, 8, 0],
-            opacity: [0.4, 0.85, 0.4],
-          }}
-          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-[12%] left-[4%] hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl glass-card border-accentCyan/40 text-xs font-mono shadow-[0_0_20px_rgba(0,240,255,0.2)] bg-surfaceDark/80 backdrop-blur-md"
-        >
+        <div className="absolute top-[12%] left-[4%] hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl glass-card border-accentCyan/40 text-xs font-mono shadow-[0_0_20px_rgba(0,240,255,0.2)] bg-surfaceDark/80 backdrop-blur-md opacity-70">
           <span className="w-2 h-2 rounded-full bg-accentCyan animate-ping" />
           <span className="text-accentCyan font-bold">&lt;React.FC /&gt;</span>
-        </motion.div>
+        </div>
 
         {/* Code Chip 2: Top Right */}
-        <motion.div
-          animate={{
-            y: [0, 20, 0],
-            x: [0, -10, 0],
-            opacity: [0.35, 0.8, 0.35],
-          }}
-          transition={{ duration: 7.5, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
-          className="absolute top-[15%] right-[6%] hidden lg:flex items-center gap-2 px-3.5 py-1.5 rounded-xl glass-card border-accentViolet/40 text-xs font-mono shadow-[0_0_20px_rgba(139,92,246,0.2)] bg-surfaceDark/80 backdrop-blur-md"
-        >
+        <div className="absolute top-[15%] right-[6%] hidden lg:flex items-center gap-2 px-3.5 py-1.5 rounded-xl glass-card border-accentViolet/40 text-xs font-mono shadow-[0_0_20px_rgba(139,92,246,0.2)] bg-surfaceDark/80 backdrop-blur-md opacity-70">
           <span className="text-accentViolet font-semibold">const</span>
           <span className="text-white font-medium">developer</span>
           <span className="text-accentCyan font-semibold">=</span>
           <span className="text-emerald-400 font-bold">true</span>
           <span className="text-white/60">;</span>
-        </motion.div>
+        </div>
 
         {/* Code Chip 3: Middle Right near text */}
-        <motion.div
-          animate={{
-            y: [0, -15, 0],
-            x: [0, -6, 0],
-            opacity: [0.4, 0.9, 0.4],
-          }}
-          transition={{ duration: 6.8, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
-          className="absolute top-[48%] right-[3%] hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-xl glass-card border-accentBlue/40 text-xs font-mono shadow-[0_0_20px_rgba(59,130,246,0.2)] bg-surfaceDark/80 backdrop-blur-md"
-        >
+        <div className="absolute top-[48%] right-[3%] hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-xl glass-card border-accentBlue/40 text-xs font-mono shadow-[0_0_20px_rgba(59,130,246,0.2)] bg-surfaceDark/80 backdrop-blur-md opacity-75">
           <span className="text-accentBlue font-bold">await</span>
           <span className="text-accentCyan">fetch</span>
           <span className="text-amber-300">('/api/v1/build')</span>
-        </motion.div>
+        </div>
 
         {/* Code Chip 4: Bottom Left near Photo */}
-        <motion.div
-          animate={{
-            y: [0, 16, 0],
-            x: [0, 10, 0],
-            opacity: [0.3, 0.75, 0.3],
-          }}
-          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 2.1 }}
-          className="absolute bottom-[18%] left-[2%] hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-xl glass-card border-emerald-500/40 text-xs font-mono shadow-[0_0_20px_rgba(16,185,129,0.2)] bg-surfaceDark/80 backdrop-blur-md"
-        >
+        <div className="absolute bottom-[18%] left-[2%] hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-xl glass-card border-emerald-500/40 text-xs font-mono shadow-[0_0_20px_rgba(16,185,129,0.2)] bg-surfaceDark/80 backdrop-blur-md opacity-70">
           <span className="text-emerald-400 font-bold">{'{'} status: 200, ok: true {'}'}</span>
-        </motion.div>
+        </div>
 
         {/* Code Chip 5: Floating Mobile/Tablet Chip */}
-        <motion.div
-          animate={{
-            y: [0, -12, 0],
-            opacity: [0.3, 0.7, 0.3],
-          }}
-          transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}
-          className="absolute top-[8%] left-[45%] flex items-center gap-1.5 px-2.5 py-1 rounded-lg glass-card border-accentCyan/30 text-[10px] font-mono shadow-sm bg-surfaceDark/70"
-        >
+        <div className="absolute top-[8%] left-[45%] flex items-center gap-1.5 px-2.5 py-1 rounded-lg glass-card border-accentCyan/30 text-[10px] font-mono shadow-sm bg-surfaceDark/70 opacity-60">
           <span className="text-accentElectric font-semibold">npm run dev</span>
-        </motion.div>
+        </div>
 
         {/* Code Chip 6: Bottom Right */}
-        <motion.div
-          animate={{
-            y: [0, -14, 0],
-            x: [0, -8, 0],
-            opacity: [0.35, 0.8, 0.35],
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 2.8 }}
-          className="absolute bottom-[12%] right-[8%] hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl glass-card border-accentViolet/40 text-xs font-mono shadow-[0_0_20px_rgba(139,92,246,0.2)] bg-surfaceDark/80 backdrop-blur-md"
-        >
+        <div className="absolute bottom-[12%] right-[8%] hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl glass-card border-accentViolet/40 text-xs font-mono shadow-[0_0_20px_rgba(139,92,246,0.2)] bg-surfaceDark/80 backdrop-blur-md opacity-75">
           <span className="text-accentViolet font-semibold">&lt;NextJS16</span>
           <span className="text-accentCyan font-medium">pwa=</span>
           <span className="text-amber-300">"offline-first"</span>
           <span className="text-accentViolet font-semibold">/&gt;</span>
-        </motion.div>
+        </div>
 
         {/* Ambient Glowing Cyber Grid Aura behind Hero */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-r from-accentCyan/15 via-accentBlue/20 to-accentViolet/15 rounded-full blur-[140px] pointer-events-none z-0" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-r from-accentCyan/15 via-accentBlue/20 to-accentViolet/15 rounded-full blur-[90px] pointer-events-none z-0" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full grid grid-cols-12 gap-3 sm:gap-8 lg:gap-12 items-center">
-        {/* LEFT COLUMN - ULTRA-MODERN ANIMATED PHOTO FRAME */}
+        {/* LEFT COLUMN - ULTRA-MODERN PHOTO FRAME */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            y: [-7, 7, -7],
-            rotate: [-2, 1.5, -2],
-          }}
-          transition={{
-            opacity: { duration: 0.9 },
-            scale: { duration: 0.9 },
-            y: { duration: 5.5, repeat: Infinity, ease: 'easeInOut' },
-            rotate: { duration: 7, repeat: Infinity, ease: 'easeInOut' },
-          }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
           className="col-span-5 sm:col-span-5 lg:col-span-5 flex justify-center items-center relative transform-gpu"
         >
           {/* REAR GLOWING LIGHT FLARE AURA (Kilauan Cahaya dari Belakang) */}
