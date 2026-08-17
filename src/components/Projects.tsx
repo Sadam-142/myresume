@@ -25,10 +25,10 @@ export const Projects: React.FC<ProjectsProps> = ({
   const currentProjects = projects[lang];
 
   return (
-    <section id="projects" className="relative py-20 sm:py-24 border-t border-white/10">
+    <section id="projects" className="relative py-10 sm:py-16 lg:py-24 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
-        <div className="mb-8 sm:mb-10">
+        <div className="mb-6 sm:mb-10">
           <span className="text-xs font-black font-brand-logo tracking-[0.2em] text-accentCyan uppercase block mb-2">
             // {lang === 'EN' ? 'SELECTED WORK' : 'PROYEK PILIHAN'}
           </span>

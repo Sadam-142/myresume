@@ -20,10 +20,10 @@ export const Certificates: React.FC<CertificatesProps> = ({
   const currentCerts = certificates[lang];
 
   return (
-    <section id="certificates" className="relative py-16 sm:py-28 border-t border-white/10">
+    <section id="certificates" className="relative py-10 sm:py-16 lg:py-24 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 md:px-12">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-4 sm:gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-10 gap-4 sm:gap-6">
           <div>
             <span className="text-[10px] sm:text-xs font-black font-brand-logo tracking-[0.2em] text-accentCyan uppercase block mb-2 sm:mb-3">
               // {lang === 'EN' ? 'RECOGNITION & CREDENTIALS' : 'SERTIFIKASI PROFESIONAL'}

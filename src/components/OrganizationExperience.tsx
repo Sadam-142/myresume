@@ -12,10 +12,10 @@ export const OrganizationExperience: React.FC<OrganizationExperienceProps> = ({ 
   const currentOrgs = organizationData[lang];
 
   return (
-    <section id="organization" className="relative py-28 border-t border-white/10">
+    <section id="organization" className="relative py-10 sm:py-16 lg:py-24 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-10 gap-4 sm:gap-6">
           <div>
             <span className="text-xs font-black font-brand-logo tracking-[0.2em] text-accentCyan uppercase block mb-3">
               // {lang === 'EN' ? 'ORGANIZATIONAL LEADERSHIP' : 'PENGALAMAN ORGANISASI'}

@@ -28,7 +28,7 @@ export const Contact: React.FC<ContactProps> = ({
   const whatsappUrl = `https://wa.me/${socialLinks.phone.replace(/[^0-9]/g, '')}`;
 
   return (
-    <section id="contact" className="relative py-14 sm:py-20 border-t border-white/10">
+    <section id="contact" className="relative py-10 sm:py-16 lg:py-24 border-t border-white/10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-12">
         {/* Main CTA Box Container */}
         <motion.div

@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({
   const currentInfo = personalInfo[lang];
 
   return (
-    <footer className="relative py-12 border-t border-white/10 bg-bgDark">
+    <footer className="relative py-6 sm:py-10 border-t border-white/10 bg-bgDark">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Left Brand */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
