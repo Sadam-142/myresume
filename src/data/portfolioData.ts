@@ -79,7 +79,6 @@ export interface CertificateItemLocale {
   year: string;
   credentialId?: string;
   image: string;
-  filePdf?: string;
   link?: string;
   skillsBadge: string[];
 }
@@ -606,7 +605,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2025 - 2028",
       credentialId: "BNSP-ADV-2025-981",
       image: "/sertif/SERTIFIKAT BNSP_page-0001.webp",
-      filePdf: "/sertif/SERTIFIKAT BNSP.pdf",
       skillsBadge: ["BNSP Certified", "Advertising", "Digital Marketing"],
     },
     {
@@ -616,7 +614,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2025",
       credentialId: "SETDA-JATENG-2025-08",
       image: "/sertif/SR_Magang_page-0001.webp",
-      filePdf: "/sertif/SR_Magang.pdf",
       skillsBadge: ["Government IT", "SIDAK", "Web Systems"],
     },
     {
@@ -626,7 +623,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2023",
       credentialId: "SC-FEDEV-2023-142",
       image: "/sertif/Ahmad Sadam Izzatulloh - E-Certif SC Frontend Development_page-0001.webp",
-      filePdf: "/sertif/Ahmad Sadam Izzatulloh - E-Certif SC Frontend Development.pdf",
       skillsBadge: ["Frontend Dev", "React.js", "JavaScript ES6+"],
     },
     {
@@ -636,7 +632,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2023",
       credentialId: "SC-PIVOT-2023-09",
       image: "/sertif/Ahmad Sadam Izzatulloh  - E-Certif SC Pivot Table_page-0001.webp",
-      filePdf: "/sertif/Ahmad Sadam Izzatulloh  - E-Certif SC Pivot Table.pdf",
       skillsBadge: ["Data Analytics", "Excel Pivot Table", "Data Analysis"],
     },
     {
@@ -664,7 +659,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2024",
       credentialId: "IMKA-2208096085",
       image: "/sertif/Sertifikat IMKA 2208096085_page-0001.webp",
-      filePdf: "/sertif/Sertifikat IMKA 2208096085.pdf",
       skillsBadge: ["Academic Competency", "IMKA Certificate", "UIN Walisongo"],
     },
     {
@@ -683,7 +677,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2025",
       credentialId: "UKM-RISALAH-2025-01",
       image: "/sertif/Ahmad Sadam Izzatulloh-1_page-0001.webp",
-      filePdf: "/sertif/Ahmad Sadam Izatulloh_Ketua 1 Risalah.pdf",
       skillsBadge: ["Organizational Leadership", "Ketua 1", "Management"],
     },
     {
@@ -693,7 +686,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2025",
       credentialId: "LDK-AROFAH-2025-11",
       image: "/sertif/Sertifikat panitia HBH LDK_page-0001.webp",
-      filePdf: "/sertif/Sertifikat panitia HBH LDK.pdf",
       skillsBadge: ["Event Management", "LDK Arofah", "Leadership"],
     },
     {
@@ -703,7 +695,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2025",
       credentialId: "ORG-KETUA-2025-02",
       image: "/sertif/Sertifikat Ketua_page-0001.webp",
-      filePdf: "/sertif/Sertifikat Ketua.pdf",
       skillsBadge: ["Leadership", "Executive Board", "Organization"],
     },
     {
@@ -742,7 +733,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2025 - 2028",
       credentialId: "BNSP-ADV-2025-981",
       image: "/sertif/SERTIFIKAT BNSP_page-0001.webp",
-      filePdf: "/sertif/SERTIFIKAT BNSP.pdf",
       skillsBadge: ["Sertifikasi BNSP", "Periklanan", "Digital Marketing"],
     },
     {
@@ -752,7 +742,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2025",
       credentialId: "SETDA-JATENG-2025-08",
       image: "/sertif/SR_Magang_page-0001.webp",
-      filePdf: "/sertif/SR_Magang.pdf",
       skillsBadge: ["Magang Setda", "Sistem SIDAK", "Web Developer"],
     },
     {
@@ -762,7 +751,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2023",
       credentialId: "SC-FEDEV-2023-142",
       image: "/sertif/Ahmad Sadam Izzatulloh - E-Certif SC Frontend Development_page-0001.webp",
-      filePdf: "/sertif/Ahmad Sadam Izzatulloh - E-Certif SC Frontend Development.pdf",
       skillsBadge: ["Frontend Dev", "React.js", "JavaScript ES6+"],
     },
     {
@@ -772,7 +760,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2023",
       credentialId: "SC-PIVOT-2023-09",
       image: "/sertif/Ahmad Sadam Izzatulloh  - E-Certif SC Pivot Table_page-0001.webp",
-      filePdf: "/sertif/Ahmad Sadam Izzatulloh  - E-Certif SC Pivot Table.pdf",
       skillsBadge: ["Data Analytics", "Excel Pivot Table", "Pengolahan Data"],
     },
     {
@@ -800,7 +787,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2024",
       credentialId: "IMKA-2208096085",
       image: "/sertif/Sertifikat IMKA 2208096085_page-0001.webp",
-      filePdf: "/sertif/Sertifikat IMKA 2208096085.pdf",
       skillsBadge: ["Sertifikat IMKA", "Kompetensi Mahasiswa", "Akademik"],
     },
     {
@@ -819,7 +805,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2025",
       credentialId: "UKM-RISALAH-2025-01",
       image: "/sertif/Ahmad Sadam Izzatulloh-1_page-0001.webp",
-      filePdf: "/sertif/Ahmad Sadam Izatulloh_Ketua 1 Risalah.pdf",
       skillsBadge: ["Kepemimpinan Organisasi", "Ketua 1", "Tata Kelola"],
     },
     {
@@ -829,7 +814,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2025",
       credentialId: "LDK-AROFAH-2025-11",
       image: "/sertif/Sertifikat panitia HBH LDK_page-0001.webp",
-      filePdf: "/sertif/Sertifikat panitia HBH LDK.pdf",
       skillsBadge: ["Panitia HBH", "LDK Arofah", "Manajemen Acara"],
     },
     {
@@ -839,7 +823,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       year: "2025",
       credentialId: "ORG-KETUA-2025-02",
       image: "/sertif/Sertifikat Ketua_page-0001.webp",
-      filePdf: "/sertif/Sertifikat Ketua.pdf",
       skillsBadge: ["Kepemimpinan", "Pengurus Pimpinan", "Organisasi"],
     },
     {

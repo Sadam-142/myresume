@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Award, ExternalLink, Maximize2 } from 'lucide-react';
+import { X, Award, Maximize2 } from 'lucide-react';
 import type { CertificateItemLocale, Language } from '../data/portfolioData';
 
 interface CertificateModalProps {
@@ -19,8 +19,6 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
   onMouseLeaveButton,
 }) => {
   if (!cert) return null;
-
-  const pdfUrl = cert.filePdf;
 
   return (
     <AnimatePresence>
@@ -66,7 +64,7 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
             </div>
           </div>
 
-          {/* Certificate Full Image Display Container (Adapts seamlessly for tall/portrait certificates) */}
+          {/* Certificate Full Image Display Container */}
           <div className="relative w-full min-h-[300px] max-h-[65vh] sm:max-h-[70vh] rounded-xl sm:rounded-2xl overflow-hidden border border-white/20 my-2 sm:my-4 bg-surfaceDarker/90 flex items-center justify-center p-2 sm:p-4">
             <img
               src={cert.image}
@@ -97,20 +95,6 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
             )}
 
             <div className="flex items-center gap-2 sm:gap-3 ml-auto">
-              {pdfUrl && (
-                <a
-                  href={pdfUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onMouseEnter={onMouseEnterButton}
-                  onMouseLeave={onMouseLeaveButton}
-                  className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl font-black font-brand-logo text-[10px] sm:text-xs text-bgDark bg-accentCyan hover:bg-accentElectric transition-all uppercase tracking-wider shadow-md"
-                >
-                  <span>{lang === 'EN' ? 'Open PDF File' : 'Buka File PDF'}</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-              )}
-
               <button
                 onClick={onClose}
                 onMouseEnter={onMouseEnterButton}
