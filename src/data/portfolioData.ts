@@ -689,6 +689,15 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       skillsBadge: ["Event Management", "LDK Arofah", "Leadership"],
     },
     {
+      id: "cert-ketua-1-risalah",
+      title: "Executive Leadership Certificate - Ketua 1 UKM LDK Risalah",
+      organization: "UKM LDK Risalah UIN Walisongo Semarang",
+      year: "2025",
+      credentialId: "111/A/PH/UKM-RISALAH/UIN-WS/XI/2025",
+      image: "/sertif/Sertifikat_Ketua_1_UKM_Risalah.webp",
+      skillsBadge: ["Ketua 1", "UKM LDK Risalah", "Executive Leadership"],
+    },
+    {
       id: "cert-ketua-isra-miraj",
       title: "Chairman of Isra' Mi'raj Event Committee Certificate",
       organization: "Panitia Isra' Mi'raj & UKM Risalah UIN Walisongo",
@@ -824,6 +833,15 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       credentialId: "LDK-AROFAH-2025-11",
       image: "/sertif/Sertifikat panitia HBH LDK_page-0001.webp",
       skillsBadge: ["Panitia HBH", "LDK Arofah", "Manajemen Acara"],
+    },
+    {
+      id: "cert-ketua-1-risalah",
+      title: "Sertifikat Penghargaan Ketua 1 UKM LDK Risalah",
+      organization: "UKM LDK Risalah UIN Walisongo Semarang",
+      year: "2025",
+      credentialId: "111/A/PH/UKM-RISALAH/UIN-WS/XI/2025",
+      image: "/sertif/Sertifikat_Ketua_1_UKM_Risalah.webp",
+      skillsBadge: ["Ketua 1", "UKM LDK Risalah", "Kepemimpinan Organisasi"],
     },
     {
       id: "cert-ketua-isra-miraj",
