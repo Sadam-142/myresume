@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Send, FolderGit2, Sparkles, Terminal } from 'lucide-react';
+import { Send, FolderGit2 } from 'lucide-react';
 import { personalInfo, socialLinks } from '../data/portfolioData';
 import type { Language } from '../data/portfolioData';
 import { IconGithub, IconLinkedin, IconInstagram } from './Icons';
@@ -17,8 +17,6 @@ export const Hero: React.FC<HeroProps> = ({
   onMouseLeaveButton,
 }) => {
   const currentInfo = personalInfo[lang];
-
-  const techBadges = ['React.js', 'Next.js', 'Laravel', 'TypeScript', 'Node.js', 'Tailwind'];
 
   return (
     <section id="hero" className="relative min-h-[auto] lg:min-h-screen pt-24 sm:pt-36 pb-12 sm:pb-24 flex items-center overflow-hidden">
@@ -60,29 +58,6 @@ export const Hero: React.FC<HeroProps> = ({
               {/* Gradient Overlay Light Sweeps */}
               <div className="absolute inset-0 bg-gradient-to-t from-bgDark/80 via-transparent to-transparent pointer-events-none" />
             </div>
-
-            {/* Top Right Floating Status Tag: Available for Hire */}
-            <div className="absolute -top-3 -right-2 sm:-top-4 sm:-right-4 z-20">
-              <div className="glass-card px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full border-emerald-500/40 bg-surfaceDark/95 backdrop-blur-md flex items-center gap-2 shadow-xl border">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
-                </span>
-                <span className="text-[10px] sm:text-xs font-bold text-emerald-400 font-mono tracking-tight">
-                  {lang === 'EN' ? 'Open to Work' : 'Siap Rekrut'}
-                </span>
-              </div>
-            </div>
-
-            {/* Bottom Left Floating Tech Tag */}
-            <div className="absolute -bottom-3 -left-2 sm:-bottom-4 sm:-left-4 z-20">
-              <div className="glass-card px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl border-accentCyan/40 bg-surfaceDark/95 backdrop-blur-md flex items-center gap-2 shadow-xl border">
-                <Terminal className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accentCyan shrink-0" />
-                <span className="text-[10px] sm:text-xs font-bold text-white font-mono">
-                  Software Engineer
-                </span>
-              </div>
-            </div>
           </div>
         </motion.div>
 
@@ -93,13 +68,10 @@ export const Hero: React.FC<HeroProps> = ({
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
           className="w-full lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left z-10"
         >
-          {/* Greeting Tag with Sparkles */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accentCyan/10 border border-accentCyan/30 mb-3 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-accentCyan animate-pulse" />
-            <span className="font-handwriting text-accentCyan text-xl sm:text-2xl font-bold tracking-wide">
-              {currentInfo.greeting}
-            </span>
-          </div>
+          {/* Plain Handwriting Greeting */}
+          <span className="font-handwriting text-accentCyan text-2xl sm:text-4xl lg:text-5xl font-bold tracking-wide block mb-1">
+            {currentInfo.greeting}
+          </span>
 
           {/* Full Name in Ultra-Modern Font */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-brand-logo tracking-tight leading-[1.12] mb-3 sm:mb-5">
@@ -109,21 +81,9 @@ export const Hero: React.FC<HeroProps> = ({
           </h1>
 
           {/* Role Description */}
-          <p className="text-sm sm:text-lg lg:text-xl font-medium text-secondaryText leading-relaxed mb-5 sm:mb-6 max-w-2xl text-center lg:text-left">
+          <p className="text-sm sm:text-lg lg:text-xl font-medium text-secondaryText leading-relaxed mb-6 sm:mb-8 max-w-2xl text-center lg:text-left">
             <span className="text-white font-bold">{currentInfo.heroDescription}</span>
           </p>
-
-          {/* Tech Stack Badges Row */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-1.5 sm:gap-2 mb-6 sm:mb-8">
-            {techBadges.map((badge) => (
-              <span
-                key={badge}
-                className="px-2.5 py-1 rounded-lg text-[11px] sm:text-xs font-mono font-semibold text-accentElectric bg-surfaceDark/90 border border-accentCyan/25 shadow-xs"
-              >
-                {badge}
-              </span>
-            ))}
-          </div>
 
           {/* Primary Action Buttons */}
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 w-full sm:w-auto mb-6 sm:mb-8">
@@ -133,7 +93,7 @@ export const Hero: React.FC<HeroProps> = ({
               onMouseLeave={onMouseLeaveButton}
               className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-bold text-xs sm:text-sm text-bgDark bg-accentCyan hover:bg-accentElectric transition-all duration-300 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] text-center cursor-pointer"
             >
-              <span>{lang === 'EN' ? 'Recruit / Contact Me' : 'Hubungi / Rekrut Saya'}</span>
+              <span>{lang === 'EN' ? 'Contact Me' : 'Hubungi Saya'}</span>
               <Send className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
             </a>
 
