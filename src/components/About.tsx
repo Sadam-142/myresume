@@ -12,10 +12,10 @@ export const About: React.FC<AboutProps> = ({ lang }) => {
   const currentInfo = personalInfo[lang];
 
   return (
-    <section id="about" className="relative py-28 border-t border-white/10">
+    <section id="about" className="relative py-10 sm:py-16 lg:py-24 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
-        <div className="flex items-center gap-4 mb-16">
+        <div className="flex items-center gap-4 mb-6 sm:mb-10">
           <span className="text-xs font-black font-brand-logo tracking-[0.2em] text-accentCyan uppercase">
             // {lang === 'EN' ? 'ABOUT ME' : 'TENTANG SAYA'}
           </span>

@@ -12,7 +12,7 @@ export const Statement: React.FC<StatementProps> = ({ lang }) => {
   const currentInfo = personalInfo[lang];
 
   return (
-    <section className="relative py-32 border-t border-white/10 overflow-hidden bg-surfaceDarker/80">
+    <section className="relative py-10 sm:py-16 lg:py-24 border-t border-white/10 overflow-hidden bg-surfaceDarker/80">
       {/* Background Animated Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-accentCyan/15 via-accentBlue/15 to-accentViolet/15 blur-[140px] rounded-full" />
@@ -25,7 +25,7 @@ export const Statement: React.FC<StatementProps> = ({ lang }) => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="inline-flex p-4 rounded-2xl bg-surfaceDark border border-white/20 text-accentCyan mb-10 shadow-xl"
+          className="inline-flex p-3 sm:p-4 rounded-2xl bg-surfaceDark border border-white/20 text-accentCyan mb-6 sm:mb-8 shadow-xl"
         >
           <Quote className="w-8 h-8" />
         </motion.div>

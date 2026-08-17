@@ -19,7 +19,7 @@ export const Hero: React.FC<HeroProps> = ({
   const currentInfo = personalInfo[lang];
 
   return (
-    <section id="hero" className="relative min-h-[auto] lg:min-h-screen pt-20 sm:pt-28 lg:pt-36 pb-10 sm:pb-16 lg:pb-24 flex items-center overflow-hidden">
+    <section id="hero" className="relative min-h-[auto] lg:min-h-screen pt-16 sm:pt-24 lg:pt-32 pb-4 sm:pb-8 lg:pb-16 flex items-center overflow-hidden">
       {/* Background Ambient Grid & Glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] sm:w-[850px] h-[400px] bg-gradient-to-r from-accentCyan/15 via-accentBlue/20 to-accentViolet/15 rounded-full blur-[100px] pointer-events-none" />
