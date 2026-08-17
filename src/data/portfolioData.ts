@@ -707,15 +707,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       skillsBadge: ["Event Chairman", "Isra' Mi'raj", "Event Management"],
     },
     {
-      id: "cert-pimpinan-organisasi",
-      title: "Student Executive Board Leadership Certificate",
-      organization: "Campus Executive Organization UIN Walisongo",
-      year: "2025",
-      credentialId: "ORG-UIN-2025-02",
-      image: "/sertif/WhatsApp Image 2025-09-13 at 11.17.15_2cd30d8b.webp",
-      skillsBadge: ["Executive Leadership", "Board Management", "Organization"],
-    },
-    {
       id: "cert-hmj-ti",
       title: "IT Department Student Association Certificate",
       organization: "HMJ Teknologi Informasi UIN Walisongo",
@@ -851,15 +842,6 @@ export const certificates: Record<Language, CertificateItemLocale[]> = {
       credentialId: "ISR-MIRAJ-2025-01",
       image: "/sertif/Sertifikat Ketua_page-0001.webp",
       skillsBadge: ["Ketua Pelaksana", "Isra' Mi'raj", "Manajemen Acara"],
-    },
-    {
-      id: "cert-pimpinan-organisasi",
-      title: "Sertifikat Kepemimpinan Pimpinan Organisasi Kemahasiswaan",
-      organization: "Organisasi Kemahasiswaan UIN Walisongo",
-      year: "2025",
-      credentialId: "ORG-UIN-2025-02",
-      image: "/sertif/WhatsApp Image 2025-09-13 at 11.17.15_2cd30d8b.webp",
-      skillsBadge: ["Kepemimpinan", "Pengurus Pimpinan", "Organisasi"],
     },
     {
       id: "cert-hmj-ti",
