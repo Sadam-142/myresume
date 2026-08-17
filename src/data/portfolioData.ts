@@ -508,6 +508,18 @@ export const skillCategories: Record<Language, SkillCategoryLocale[]> = {
       ],
     },
     {
+      category: "Professional Soft Skills",
+      description: "Core interpersonal & problem-solving abilities.",
+      iconName: "Palette",
+      skills: [
+        { name: "Analytical & Logical Thinking" },
+        { name: "Effective Time Management" },
+        { name: "Team Communication & Collaboration" },
+        { name: "Systematic Problem Solving" },
+        { name: "Organizational Leadership" },
+      ],
+    },
+    {
       category: "Tools & Infrastructure Dev",
       description: "Development environment, deployment & integration tools.",
       iconName: "Wrench",
@@ -516,6 +528,16 @@ export const skillCategories: Record<Language, SkillCategoryLocale[]> = {
         { name: "Git & GitHub" },
         { name: "Cloudinary" },
         { name: "REST API Integration" },
+      ],
+    },
+    {
+      category: "Languages & Certifications",
+      description: "Language proficiency & certified skills.",
+      iconName: "Sparkles",
+      skills: [
+        { name: "Indonesian (Native)" },
+        { name: "English (Professional Working Proficiency)" },
+        { name: "BNSP Certified Advertising Specialist" },
       ],
     },
   ],
@@ -540,6 +562,18 @@ export const skillCategories: Record<Language, SkillCategoryLocale[]> = {
       ],
     },
     {
+      category: "Soft Skills & Kepemimpinan",
+      description: "Kemampuan interpersonal, analitis, dan manajerial.",
+      iconName: "Palette",
+      skills: [
+        { name: "Kemampuan Berpikir Analitis & Logis" },
+        { name: "Manajemen Waktu yang Efektif" },
+        { name: "Komunikasi & Kolaborasi Tim" },
+        { name: "Pemecahan Masalah Sistematis" },
+        { name: "Berorganisasi & Kepemimpinan" },
+      ],
+    },
+    {
       category: "Tools & Infrastruktur Dev",
       description: "Lingkungan pengembangan, pengujian, & penyebaran sistem.",
       iconName: "Wrench",
@@ -548,6 +582,16 @@ export const skillCategories: Record<Language, SkillCategoryLocale[]> = {
         { name: "Git & GitHub" },
         { name: "Cloudinary" },
         { name: "Integrasi REST API" },
+      ],
+    },
+    {
+      category: "Bahasa & Sertifikasi",
+      description: "Penguasaan bahasa & sertifikasi profesional.",
+      iconName: "Sparkles",
+      skills: [
+        { name: "Bahasa Indonesia (Native)" },
+        { name: "Bahasa Inggris (Professional Working)" },
+        { name: "BNSP Sertifikasi Keahlian Periklanan" },
       ],
     },
   ],
