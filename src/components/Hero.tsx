@@ -19,13 +19,13 @@ export const Hero: React.FC<HeroProps> = ({
   const currentInfo = personalInfo[lang];
 
   return (
-    <section id="hero" className="relative min-h-[auto] lg:min-h-screen pt-24 sm:pt-36 pb-12 sm:pb-24 flex items-center overflow-hidden">
+    <section id="hero" className="relative min-h-[auto] lg:min-h-screen pt-20 sm:pt-28 lg:pt-36 pb-10 sm:pb-16 lg:pb-24 flex items-center overflow-hidden">
       {/* Background Ambient Grid & Glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] sm:w-[850px] h-[400px] bg-gradient-to-r from-accentCyan/15 via-accentBlue/20 to-accentViolet/15 rounded-full blur-[100px] pointer-events-none" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full flex flex-col lg:grid lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
         {/* LEFT / TOP COLUMN - PREMIUM PHOTO PORTRAIT FRAME */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -34,14 +34,14 @@ export const Hero: React.FC<HeroProps> = ({
           className="w-full lg:col-span-5 flex justify-center items-center relative transform-gpu"
         >
           {/* Ambient Outer Aura Ring */}
-          <div className="absolute -inset-4 sm:-inset-6 rounded-[35px] bg-gradient-to-r from-accentCyan via-accentBlue to-accentViolet opacity-60 blur-xl animate-pulse-slow pointer-events-none z-0 transform-gpu" />
+          <div className="absolute -inset-3 sm:-inset-6 rounded-[35px] bg-gradient-to-r from-accentCyan via-accentBlue to-accentViolet opacity-60 blur-xl animate-pulse-slow pointer-events-none z-0 transform-gpu" />
 
           {/* Glowing Ring Border */}
           <div className="absolute -inset-1.5 sm:-inset-2 rounded-[30px] bg-gradient-to-tr from-accentCyan via-accentElectric to-accentViolet blur-sm z-0 pointer-events-none transform-gpu opacity-80" />
 
           {/* MAIN PHOTO CONTAINER */}
-          <div className="relative z-10 w-full max-w-[240px] sm:max-w-xs md:max-w-sm aspect-[4/5] rounded-[26px] p-[2.5px] bg-gradient-to-b from-accentCyan via-white/50 to-accentViolet shadow-[0_0_50px_rgba(0,240,255,0.35)] backdrop-blur-2xl border border-white/30">
-            <div className="relative w-full h-full rounded-[23px] bg-surfaceDark overflow-hidden group shadow-2xl">
+          <div className="relative z-10 w-full max-w-[200px] sm:max-w-[240px] lg:max-w-sm aspect-[4/5] rounded-[24px] sm:rounded-[28px] p-[2.5px] bg-gradient-to-b from-accentCyan via-white/50 to-accentViolet shadow-[0_0_50px_rgba(0,240,255,0.35)] backdrop-blur-2xl border border-white/30">
+            <div className="relative w-full h-full rounded-[21px] sm:rounded-[25px] bg-surfaceDark overflow-hidden group shadow-2xl">
               {/* Photo Image */}
               <img
                 src="/foto.webp"
@@ -74,19 +74,19 @@ export const Hero: React.FC<HeroProps> = ({
           </span>
 
           {/* Full Name in Ultra-Modern Font */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-brand-logo tracking-tight leading-[1.12] mb-3 sm:mb-5">
+          <h1 className="text-2xl sm:text-4xl lg:text-6xl font-black font-brand-logo tracking-tight leading-[1.12] mb-2 sm:mb-4">
             <span className="text-gradient">
               {currentInfo.heroName}
             </span>
           </h1>
 
           {/* Role Description */}
-          <p className="text-sm sm:text-lg lg:text-xl font-medium text-secondaryText leading-relaxed mb-6 sm:mb-8 max-w-2xl text-center lg:text-left">
+          <p className="text-sm sm:text-lg lg:text-xl font-medium text-secondaryText leading-relaxed mb-5 sm:mb-6 max-w-2xl text-center lg:text-left">
             <span className="text-white font-bold">{currentInfo.heroDescription}</span>
           </p>
 
           {/* Primary Action Buttons */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 w-full sm:w-auto mb-6 sm:mb-8">
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 w-full sm:w-auto mb-5 sm:mb-6">
             <a
               href="#contact"
               onMouseEnter={onMouseEnterButton}
