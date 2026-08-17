@@ -157,7 +157,7 @@ export const Hero: React.FC<HeroProps> = ({
             <div className="relative w-full h-full rounded-[13px] sm:rounded-[21px] bg-surfaceDark overflow-hidden flex flex-col justify-end group shadow-2xl">
               {/* Profile Photo */}
               <img
-                src="/foto.jpeg"
+                src="/foto.webp"
                 alt={currentInfo.name}
                 decoding="async"
                 width={400}

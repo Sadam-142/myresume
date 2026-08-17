@@ -27,6 +27,17 @@ export function App() {
   const [selectedProject, setSelectedProject] = useState<ProjectItemLocale | null>(null);
   const [selectedCertificate, setSelectedCertificate] = useState<CertificateItemLocale | null>(null);
 
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth >= 1024 && !('ontouchstart' in window));
+    };
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop, { passive: true });
+    return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
+
   useEffect(() => {
     const root = document.documentElement;
     if (theme === 'light') {
@@ -47,15 +58,23 @@ export function App() {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
 
-  const handleMouseEnterButton = () => setCursorVariant('button');
-  const handleMouseLeaveButton = () => setCursorVariant('default');
-  const handleMouseEnterProject = () => setCursorVariant('project');
-  const handleMouseLeaveProject = () => setCursorVariant('default');
+  const handleMouseEnterButton = () => {
+    if (isDesktop) setCursorVariant('button');
+  };
+  const handleMouseLeaveButton = () => {
+    if (isDesktop) setCursorVariant('default');
+  };
+  const handleMouseEnterProject = () => {
+    if (isDesktop) setCursorVariant('project');
+  };
+  const handleMouseLeaveProject = () => {
+    if (isDesktop) setCursorVariant('default');
+  };
 
   return (
     <div className="relative min-h-screen bg-bgDark text-primaryText font-sans selection:bg-accentCyan/20 selection:text-accentElectric overflow-x-hidden transition-colors duration-300">
-      {/* Custom Pointer Cursor (Desktop) */}
-      <CustomCursor cursorVariant={cursorVariant} />
+      {/* Custom Pointer Cursor (Desktop Only for Mobile Performance) */}
+      {isDesktop && <CustomCursor cursorVariant={cursorVariant} />}
 
       {/* Ambient Background & Grid Overlay */}
       <BackgroundEffects />

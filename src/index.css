@@ -25,6 +25,18 @@
   backface-visibility: hidden;
 }
 
+/* Off-Screen Rendering Skipping (Massive DOM Render & TBT Speedup) */
+#skills,
+#education,
+#work,
+#projects,
+#organization,
+#certificates,
+#contact {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 600px;
+}
+
 /* Modern Brand Logo & Heading Typography */
 .font-brand-logo {
   font-family: 'Space Grotesk', 'Sora', sans-serif;
