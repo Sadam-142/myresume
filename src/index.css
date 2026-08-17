@@ -253,21 +253,40 @@ html.light .text-gradient-alt {
   -webkit-text-fill-color: transparent;
 }
 
-/* Continuous Floating Photo Frame Motion (Pauses on Hover / Touch) */
+/* Continuous Floating Photo Frame Motion (GPU 3D Accelerated, Pauses on Hover & Mobile) */
 @keyframes floatContinuous {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translateY(-12px) rotate(1.5deg);
+    transform: translate3d(0, -6px, 0);
   }
 }
 
 .animate-float-continuous {
-  animation: floatContinuous 5s ease-in-out infinite;
+  animation: floatContinuous 4s ease-in-out infinite;
   will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 .animate-float-continuous:hover {
   animation-play-state: paused;
+}
+
+/* Mobile Performance Optimization (Eliminate backdrop blur compositing jitter during scroll) */
+@media (max-width: 768px) {
+  .animate-float-continuous {
+    animation: none !important;
+  }
+  .glass-card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(18, 18, 24, 0.96) !important;
+  }
+  .glass-nav {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(12, 12, 16, 0.98) !important;
+  }
 }
