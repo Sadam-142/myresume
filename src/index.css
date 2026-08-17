@@ -14,7 +14,15 @@
     background-color: #080808;
     color: #F5F5F5;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
+}
+
+/* GPU Hardware Acceleration for Buttery Smooth Scrolling */
+.glass-card, .glass-nav, section {
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Modern Brand Logo & Heading Typography */

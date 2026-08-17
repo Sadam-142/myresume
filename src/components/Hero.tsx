@@ -128,11 +128,11 @@ export const Hero: React.FC<HeroProps> = ({
             y: { duration: 5.5, repeat: Infinity, ease: 'easeInOut' },
             rotate: { duration: 7, repeat: Infinity, ease: 'easeInOut' },
           }}
-          className="col-span-5 sm:col-span-5 lg:col-span-5 flex justify-center items-center relative"
+          className="col-span-5 sm:col-span-5 lg:col-span-5 flex justify-center items-center relative transform-gpu"
         >
           {/* REAR GLOWING LIGHT FLARE AURA (Kilauan Cahaya dari Belakang) */}
-          <div className="absolute -inset-3 sm:-inset-6 rounded-3xl bg-gradient-to-r from-accentCyan via-accentBlue to-accentViolet opacity-75 blur-xl sm:blur-2xl animate-pulse-slow pointer-events-none z-0" />
-          <div className="absolute -inset-6 sm:-inset-10 rounded-full bg-gradient-to-tr from-accentElectric/50 via-accentCyan/30 to-accentViolet/60 opacity-60 blur-2xl sm:blur-3xl animate-spin-slow pointer-events-none z-0" />
+          <div className="absolute -inset-3 sm:-inset-6 rounded-3xl bg-gradient-to-r from-accentCyan via-accentBlue to-accentViolet opacity-70 blur-lg sm:blur-xl animate-pulse-slow pointer-events-none z-0 transform-gpu" />
+          <div className="absolute -inset-6 sm:-inset-10 rounded-full bg-gradient-to-tr from-accentElectric/40 via-accentCyan/20 to-accentViolet/50 opacity-50 blur-xl sm:blur-2xl animate-spin-slow pointer-events-none z-0 transform-gpu" />
 
           {/* Animated Glowing Ring Border around Photo */}
           <motion.div
@@ -141,7 +141,7 @@ export const Hero: React.FC<HeroProps> = ({
               opacity: [0.5, 0.9, 0.5],
             }}
             transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute -inset-1 sm:-inset-2 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-accentCyan via-accentElectric to-accentViolet blur-md z-0 pointer-events-none"
+            className="absolute -inset-1 sm:-inset-2 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-accentCyan via-accentElectric to-accentViolet blur-sm z-0 pointer-events-none transform-gpu"
           />
 
           {/* Corner Ambient Flare Highlights */}

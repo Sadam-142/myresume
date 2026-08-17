@@ -10,15 +10,23 @@ export const CustomCursor: React.FC<CustomCursorProps> = ({ cursorVariant }) => 
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-      if (!isVisible) setIsVisible(true);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setMousePosition({ x: e.clientX, y: e.clientY });
+          if (!isVisible) setIsVisible(true);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     const handleMouseLeave = () => setIsVisible(false);
     const handleMouseEnter = () => setIsVisible(true);
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     document.addEventListener('mouseleave', handleMouseLeave);
     document.addEventListener('mouseenter', handleMouseEnter);
 
@@ -93,7 +101,7 @@ export const CustomCursor: React.FC<CustomCursorProps> = ({ cursorVariant }) => 
     <div className="custom-cursor-wrapper pointer-events-none fixed inset-0 z-[9999] overflow-hidden">
       {/* Outer Ring */}
       <motion.div
-        className="fixed rounded-full flex items-center justify-center pointer-events-none backdrop-blur-[1px]"
+        className="fixed rounded-full flex items-center justify-center pointer-events-none"
         animate={cursorVariant}
         variants={variants}
       >
